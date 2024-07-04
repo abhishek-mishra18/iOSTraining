@@ -61,7 +61,8 @@ print(userNames)
 
 // using flatmap higher order function
 
-var userName = testArray.flatMap{$0.name} // returns array of characters
+var userName = testArray.map{[$0.name]}.flatMap{$0}
+print(userName)
 
 // sorting using sorted function
 
